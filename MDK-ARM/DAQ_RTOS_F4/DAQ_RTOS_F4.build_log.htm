@@ -1,0 +1,69 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.29.0.0
+Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: mohamed sayed, ASU, LIC=32BVE-5LGDT-JIK5S-LKLU4-QD6AJ-LQK60
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.29.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.13.1
+Assembler:       Armasm.exe V6.13.1
+Linker/Locator:  ArmLink.exe V6.13.1
+Library Manager: ArmAr.exe V6.13.1
+Hex Converter:   FromElf.exe V6.13.1
+CPU DLL:         SARMCM3.DLL V5.29.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Dialog DLL:      TCM.DLL V1.36.5.0
+ 
+<h2>Project:</h2>
+C:\Users\Mohamed-Sayed\Downloads\DAQ_RTOS_F4_VERSION_5\DAQ_RTOS_F4\MDK-ARM\DAQ_RTOS_F4.uvprojx
+Project File Date:  06/28/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.13.1', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'DAQ_RTOS_F4'
+../Core/Src/main.c(116): warning: while loop has empty body [-Wempty-body]
+                while(HAL_CAN_IsTxMessagePending(&hcan1,mailbox));
+                                                                 ^
+../Core/Src/main.c(116): note: put the semicolon on a separate line to silence this warning
+../Core/Src/main.c(143): warning: while loop has empty body [-Wempty-body]
+                while( ! ( HAL_CAN_GetRxFifoFillLevel(&hcan1,CAN_RX_FIFO0)));           
+                                                                            ^
+../Core/Src/main.c(143): note: put the semicolon on a separate line to silence this warning
+2 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=32342 RO-data=530 RW-data=20 ZI-data=20412  
+FromELF: creating hex file...
+"DAQ_RTOS_F4\DAQ_RTOS_F4.axf" - 0 Error(s), 2 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.14.0.pack
+                Keil.STM32F4xx_DFP.2.14.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_DAQ_RTOS_F4
+  C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\Mohamed-Sayed\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
