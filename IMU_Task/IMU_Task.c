@@ -100,7 +100,7 @@ void IMU_Task(void * Parameters)
 		AcclerationDataTimes100[2]=AcclerationData_Float[2] *100; //REPRESENTS ACCLERATION IN Z-AXIS
 		
 	
-		
+		taskENTER_CRITICAL();
 		uint8_t Iterator_U8=0;
 		for(Iterator_U8=0;Iterator_U8<5;Iterator_U8 += 2)
 		{
@@ -114,7 +114,8 @@ void IMU_Task(void * Parameters)
 		DividedAcclerationData[Iterator_U8]  =(uint8_t)  AcclerationDataTimes100[Iterator_U8/2];
 		DividedAcclerationData[Iterator_U8+1]=(uint8_t)( AcclerationDataTimes100[Iterator_U8/2]>>8 );
 		
-		}	
+		}
+		taskEXIT_CRITICAL();
 		
 
 //		current=HAL_GetTick();
