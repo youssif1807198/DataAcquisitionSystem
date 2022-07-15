@@ -147,7 +147,7 @@ void CAN_Task(void * Parameters)
   {
 	  
 	
-  taskENTER_CRITICAL();
+  	taskENTER_CRITICAL();
 		
 	HAL_CAN_AddTxMessage(GLOB_hcan,&pheader_IMU_EulerAngles,&DividedEulerAngles[0],&pTxMailbox_IMU_EulerAngles);
 	HAL_CAN_AddTxMessage(GLOB_hcan,&pheader_IMU__3D_ACC,&DividedAcclerationData[0],&pTxMailbox_IMU_3D_ACC);	
@@ -155,10 +155,7 @@ void CAN_Task(void * Parameters)
 	HAL_CAN_AddTxMessage(GLOB_hcan,&pheader_PROXIMITY_SPEED_AND_ENCODER,& Message_ENCODER_AND_PROXIMITY_ANGLE [0],&pTxMailbox_PROXIMITY_SPEED_AND_ENCODER);
 	HAL_CAN_AddTxMessage(GLOB_hcan,&pheader_PROXIMITY_RPM,&WHEELS_RPM[0],&pTxMailbox_PROXIMITY_RPM);
 
-//	HAL_CAN_AddTxMessage(GLOB_hcan,&pTxMailbox_ENCODER,&message[0],&pTxMailbox_ENCODER);
-		
-		
-		
+			
 	Message_ENCODER_AND_PROXIMITY_ANGLE[0] =(uint8_t) (AVERAGE_SPEED);
 	Message_ENCODER_AND_PROXIMITY_ANGLE[1] =(uint8_t) (AVERAGE_SPEED>>8); 
 	Message_ENCODER_AND_PROXIMITY_ANGLE[2] =(uint8_t) (angle);
@@ -169,9 +166,7 @@ void CAN_Task(void * Parameters)
 	taskEXIT_CRITICAL();
 
 	
-	
-	
-								taskYIELD();
+	taskYIELD();
 
 	
 
