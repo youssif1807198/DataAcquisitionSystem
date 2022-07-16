@@ -18,3 +18,14 @@ Encoder:
 Measures the rotational  angle of the  steering wheel 
 Linear potentiometer  
 Measures the distance that done by  suspension system by mapping voltage to distance
+
+Code responisible for:
+Implementing the driver for IMU (Inertial Measurement Unit) BNO055 from Bosch  
+Interfacing with different sensors on our formula car 
+1. Proximity sensor 
+2. Travel sensor 
+3. Encoder  
+Deals with CAN communication to transmit sensors readings through the bus
+Implement the whole project as tasks using FreeRTOS
+Deals with NUCLEO-F446RE
+Implement mechanism to detect if one of the sensors is cut off or failed and alerting the driver through the dashboard.
