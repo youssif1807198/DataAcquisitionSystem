@@ -1,5 +1,5 @@
 # DataAcquisitionSystem
-data acquisition system which it's responsible for interfacing with different sensors on our formula student car which participate in formula student uk competition https://www.imeche.org/events/formula-student and collects data from it and can provide essential information to the dashboard through can bus or to data logging or sending these data outside to monitor performance of the car on the track
+Data acquisition system which it's responsible for interfacing with different sensors on our formula student car which participate in formula student uk competition https://www.imeche.org/events/formula-student and collects data from it and can provide essential information to the dashboard through can bus or to data logging or sending these data outside to monitor performance of the car on the track
 
 Importance of data acquisition system:
 Validate MATLAB model of our formula car with real collected data
